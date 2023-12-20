@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+/* modern theme */
+@font-face {
+	font-family: 'Quicksand';
+	src: url('/fonts/Quicksand.ttf');
+	font-display: swap;
+}
+
+html,
+body {
+	@apply h-full ;
+}
+
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('/fonts/Quicksand.ttf');
+	font-display: swap;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent!important;
+}
+
+.drawer {
+	min-width: 420px;
+}
+
+
+/* MENU TABS */
+
+
+.panel {
+	@apply min-h-[120px] overflow-y-hidden;
+	max-height: calc(100vh - 86px);
+	margin: 16px;
+}
+
+.info-line {
+	@apply pb-4
+}
+
+.table-container {
+	@apply overflow-y-scroll mt-2;
+	max-height: 179px;
+}
+
+.loading-text {
+	@apply text-xs text-center m-2;
+}
+
+
+/* MESSAGE LAYOUT */
+
+
+.message-container {
+	@apply lg:h-screen h-[calc(100vh-68px)] flex flex-col justify-end pb-10 space-y-10 items-center;
+}
+
+.message-container-content {
+	@apply flex flex-col px-3 w-11/12;
+	min-width: 440px;
+	max-width: 640px;
+	max-height: calc(100vh - 67px - 40px);
+}
+
+.message-item {
+	@apply flex gap-4 p-2
+}
+
+.message-card {
+	@apply hover:cursor-pointer min-w-[120px];
+	--tw-ring-shadow: 0 0 #000;
+}
+
+.message-input {
+	@apply grow mt-2 min-h-[58px] grid-cols-[1fr_auto] rounded-lg drop-shadow-lg;
+}
+
+
+/* BUTTONS */
+
+
+.svg-btn {
+	@apply self-end rounded-lg;
+	justify-content: center!important;
+}
